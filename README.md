@@ -2,12 +2,14 @@
 
 This tool analyzes matchup luck in ESPN Fantasy Basketball leagues by comparing actual performance against expected performance across all categories.
 
+If a team has been really lucky with matchups they might not be as strong as their record indicates, and vice versa. For example if two really strong teams matchup and one team wins each stat category by a small amount, the loser would likely have beat any other team but does not get credit for it.
+
 ## Overview
 
 The matchup luck calculator:
 - Calculates how each team would have performed against every other team each week
-- Shows which teams have been lucky (performing above expected) or unlucky (performing below expected)
-- Identifies the most unlucky single-week performance
+- Shows which teams have been lucky (performing better in their matchup that against the field) or unlucky (performing worse in their matchup than against the field)
+- Identifies the most lucky and unlucky single-week performance
 
 ## Installation
 
@@ -41,7 +43,7 @@ python matchup_luck.py
 
 2. **Luck Calculation**
    - For each week, compares each team's category results against their expected results
-   - Expected results are calculated by simulating matchups against all teams
+   - Expected results are calculated by checking stats against all teams
    - Luck score = Actual Results - Expected Results
    - Positive scores indicate lucky performance (better than expected)
    - Negative scores indicate unlucky performance (worse than expected)
@@ -52,9 +54,6 @@ python matchup_luck.py
    - Highlights the single most unlucky performance of the season
 
 ## Example Output
-
-[i] 1:CTP, 2:NYM, 8:HKBC, 9:WW, 10:AB, 11:MM, 13:MSS, 23:RR, 28:BHM, 29:BS, 30:Boog, 31:AS, 32:C-FL, 33:SS, 34:SLS, 35:WWB
-[i] 0:PTS, 1:BLK, 2:STL, 3:AST, 4:OREB, 5:DREB, 17:3PM, 19:FG%, 20:FT%, 21:3P%, 35:A/TO
 
 Team Luck (Actual - Expected) by Week:
 Positive values = Lucky (performed better than expected)
@@ -78,9 +77,6 @@ Negative values = Unlucky (performed worse than expected)
 | WW     |   -0.075 |   -0.188 |   -0.055 |   -0.039 |    0.133 |   -0.148 |    0.045 |   -0.103 |   -0.103 |    0.491 |    -0.064 |    -0.312 |    -0.127 |    -0.409 |     0.024 |    -0.276 |
 | SS     |   -0.087 |    0.103 |    0.161 |   -0.152 |   -0.297 |   -0.348 |    0.309 |   -0.188 |    0.106 |    0.055 |    -0.152 |    -0.221 |    -0.209 |    -0.076 |    -0.179 |    -0.224 |
 
-Most Unlucky Result:
-Week 6: HKBC
-Luck Score: -0.524
 ```
 
 ## Notes
