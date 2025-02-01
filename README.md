@@ -21,19 +21,12 @@ pip install requests tabulate colorama
 ```
 ## Usage
 
-Run the script with an optional ESPN Fantasy Basketball league URL:
-
-```bash
-python matchup_luck.py --url "https://fantasy.espn.com/basketball/league?leagueId=YOUR_LEAGUE_ID"
-```
-
-```bash
-python matchup_luck.py --url "https://fantasy.espn.com/basketball/league?leagueId=YOUR_LEAGUE_ID"
-```
+Run the script and it will ask you for the league ID and season:
 
 ```bash
 python matchup_luck.py
 ```
+
 ## How It Works
 
 1. **Data Collection**
@@ -52,6 +45,7 @@ python matchup_luck.py
    - Displays a table showing luck scores by team and week
    - Teams are sorted by season-long luck (most lucky to most unlucky)
    - Highlights the single most unlucky performance of the season
+   - Saves the output to `output/[date]_[leagueid]_[season]_luck.txt` and `output/[date]_[leagueid]_[season]_luck.html`
 
 ## Example Output
 
